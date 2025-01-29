@@ -1,0 +1,29 @@
+.posts li {
+    padding: 10px;
+    list-style: circle;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.posts li time {
+    float: right;
+}
+.posts li a {
+    transition: all .4s;
+}
+.posts li:hover {
+    color: #ff9537
+}
+.posts li:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    transform: translate(0,0);
+    background: #fff0e3;
+    left: 0;
+    z-index: -1;
+    border-radius: 4px;
+    animation: page-hover .6s
+}

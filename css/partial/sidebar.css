@@ -1,0 +1,119 @@
+#sidebar {
+    background:  #ffe4ad;
+    padding: 14px;
+    transition: all 1s;
+    box-shadow: #ffac00 0 0 0 8px, #ffac008f 0 0 0 16px;
+    animation: sidebarC 4s;
+}
+@keyframes sidebarC {
+    0% {
+        height: 0px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        height: calc(100vh - 120px);
+    }
+}
+@keyframes head {
+    0% {
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+#sidebar .info div {
+    display: inline-block;
+    width: calc(100% - 70px);
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#sidebar .social {
+    display: flex;
+    justify-content: space-between;
+}
+#sidebar .social a {
+    background: #ffcf6b;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    width: 37px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: all 1s;
+}
+#sidebar .social a:hover {
+    background: #ffb51c;
+}
+#sidebar .social a i {
+    font-size: 23px;
+}
+#sidebar .social a img {
+    height: 26px;
+}
+#sidebar .category-list {
+    background: #ffffed;
+    color: #808080;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 16px 0;
+}
+#sidebar .category-list-item {
+    list-style: circle;
+    margin: 6px 0 6px 16px;
+    position: relative;
+}
+#sidebar .category-list-item span {
+    float: right;
+    z-index: 1;
+}
+#sidebar .category-list-item span::after {
+    content: ')'
+}
+#sidebar .category-list-item span::before {
+    content: '(';
+}
+#sidebar.tags a:hover::after, #sidebar .relat li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffac00;
+    animation: .6s tag-hover;
+}
+#sidebar .tags a  {
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+}
+@keyframes tag-hover {
+    0% {
+        width: 0;
+    }
+}
+#sidebar .relat li {
+    transition: all .4s;
+    list-style: circle;
+    margin-left: 10px;
+    position: relative;
+}
+#sidebar .relat li:hover,  #sidebar .category-list-item:hover, .structure .toc a:hover {
+    color: #ffac00
+}
+.structure .toc {
+    font-size: 90%;
+}
+.structure .toc .toc-item {
+    position: relative;
+    margin: 4px 0 4px 8px ;
+}
+.structure .toc > li {
+    margin-left: 4px !important;
+}
